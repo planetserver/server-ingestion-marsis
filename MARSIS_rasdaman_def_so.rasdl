@@ -1,0 +1,56 @@
+struct MARSIS_dataSO {
+	float echo_mod_m1_f1; 
+	float echo_pha_m1_f1;
+	float echo_mod_00_f1;
+	float echo_pha_00_f1;
+	float echo_mod_p1_f1; 
+	float echo_pha_p1_f1;
+	float echo_mod_m1_f2; 
+	float echo_pha_m1_f2;
+	float echo_mod_00_f2;
+	float echo_pha_00_f2;
+	float echo_mod_p1_f2; 
+	float echo_pha_p1_f2;
+	};
+
+typedef marray <MARSIS_dataSO, 2> MARSIS_data_covSO;
+
+typedef set <MARSIS_data_covSO> MARSIS_data_cubeSO;
+
+struct MARSIS_cscsSO {
+	double cscs_mod_m1_f1; 
+	double cscs_pha_m1_f1;
+	double cscs_mod_00_f1;
+	double cscs_pha_00_f1;
+	double cscs_mod_p1_f1; 
+	double cscs_pha_p1_f1;
+	double cscs_mod_m1_f2; 
+	double cscs_pha_m1_f2;
+	double cscs_mod_00_f2;
+	double cscs_pha_00_f2;
+	double cscs_mod_p1_f2; 
+	double cscs_pha_p1_f2;
+	};
+
+typedef marray <MARSIS_cscsSO, 2> MARSIS_cscs_covSO;
+
+typedef set <MARSIS_cscs_covSO> MARSIS_cscs_cubeSO;
+
+struct MARSIS_iscsSO {
+	double iscs_mod_m1_f1; 
+	double iscs_pha_m1_f1;
+	double iscs_mod_00_f1;
+	double iscs_pha_00_f1;
+	double iscs_mod_p1_f1; 
+	double iscs_pha_p1_f1;
+	double iscs_mod_m1_f2; 
+	double iscs_pha_m1_f2;
+	double iscs_mod_00_f2;
+	double iscs_pha_00_f2;
+	double iscs_mod_p1_f2; 
+	double iscs_pha_p1_f2;
+	};
+
+typedef marray <MARSIS_iscsSO, 2> MARSIS_iscs_covSO;
+
+typedef set <MARSIS_iscs_covSO> MARSIS_iscs_cubeSO;
