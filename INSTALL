@@ -1,0 +1,33 @@
+This files describes the steps followed for the installation on marsis.planetserver.eu
+
+###### Server Operating System #################################################
+Debian GNU/Linux 7 "Wheezy"
+
+###### RasDaMan installation ###################################################
+
+follow the guides available at:
+
+http://www.rasdaman.org/wiki/RasdamanQuickInstallDebian7
+http://www.rasdaman.org/wiki/RasdamanQuickInstall
+
+Change "metadata_user" to "rasdaman" in file RASDAMAN_INSTALL/etc/petascope.properties line 27
+
+###### PostGIS installation ####################################################
+WARNING: PostGIS 2 is required.
+         Debian GNU/Linux 7 "Wheezy" includes PostGIS version 1.5
+         REMOVE it if installed
+         
+         apt-get remove postgis postgresql-9.1-postgis
+         
+Install PostGIS 2 from source
+
+http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS20Debian70src
+
+###### Post installation #######################################################
+RUN update_petascopedb.sh
+
+RUN updatedb
+
+Set "access" to "trust" in PostgreSQL config file pg_hba.conf
+
+
