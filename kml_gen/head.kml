@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"
+ xmlns:gx="http://www.google.com/kml/ext/2.2">
+<Document>
+<description>
+</description>
+<Style id="highlightPlacemark">
+  <IconStyle>
+    <Icon>
+      <href></href>
+    </Icon>
+  </IconStyle>
+  <LabelStyle>
+    <scale>1</scale>
+  </LabelStyle>
+  <LineStyle>
+      <color>ffff00ff</color>
+  </LineStyle>
+  <PolyStyle>
+    <color>ffff00ff</color>
+  </PolyStyle>
+</Style>
+<Style id="normalPlacemark">
+  <IconStyle>
+    <Icon>
+      <href></href>
+    </Icon>
+  </IconStyle>
+  <LabelStyle>
+    <scale>0</scale>
+  </LabelStyle>
+  <LineStyle>
+      <color>ffffff00</color>
+  </LineStyle>
+  <PolyStyle>
+    <color>ffffff00</color>
+  </PolyStyle>
+</Style>
+<StyleMap id="hightlightStyleMap">
+  <Pair>
+    <key>normal</key>
+    <styleUrl>#normalPlacemark</styleUrl>
+  </Pair>
+  <Pair>
+    <key>highlight</key>
+    <styleUrl>#highlightPlacemark</styleUrl>
+  </Pair>
+</StyleMap>
