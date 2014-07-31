@@ -1,0 +1,19 @@
+################################################################################
+Scripts for decimeted MARSIS orbit footprints KML file generation to be used 
+in 2D client for orbit visualization on Mars map.
+################################################################################
+
+NOTE: the scripts require GNU Octave
+
+###### Files list ##############################################################
+bd_kml_gen.m                Generates kml file with fottprints for the orbits 
+                            related to radargrams in the DB
+orbit_kml_gen.m             Function generatig the kml file section for a single
+                            orbit (used by bd_kml_gen.m)
+head.kml_out                Header of the generating kml file (used by bd_kml_gen.m)
+
+
+###### Usage ###################################################################
+
+From GNU octave shell
+db_kml_gen(filename)        (omit filename for default name "marsis_orbits_footprints.kml")
