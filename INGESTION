@@ -1,0 +1,36 @@
+This files describes the use of the ingestion scripts
+
+NOTE: the ingestion process requires GNU Octave
+
+###### Files used in the ingestion process #####################################
+MARSIS_rasdaman_def_so.rasdl                RasDaMan DB types definitions
+MARSIS_postgis_create_db.sh                 PostGIS DB creation
+MARSIS_postgis_create_tables.sql            PostGIS DB table definition
+MARSIS_postgis_ingest_orbit.m               MARSIS orbit data ingestion
+MARSIS_postgis_ingest_echo_meta.m           MARSIS single echo metadata
+                                            ingestion (used by MARSIS_postgis_ingest_orbit.m)
+MARSIS_rasda_ingest_echo_data_so.m          MARSIS single echo data and simulation
+                                            ingestion (used by MARSIS_postgis_ingest_orbit.m)
+PostGIS_Petascope_insert.sh                 Petascope DB data insert
+
+
+###### Usage ###################################################################
+To be run ONCE:
+
+rasdl -r MARSIS_rasdaman_def_so.rasdl -i
+MARSIS_postgis_create_db.sh
+psql marsisdb -f MARSIS_postgis_create_tables.sql
+
+
+To be run for orbit ingestion:
+in GNU octave shell:
+MARSIS_postgis_ingest_orbit(orbit_id, ingest_data, ingest_sim, ingest_meta) (orbit_id = ornit id number, ingest_* = [0,1])
+
+Radargram (real data) ingestion:
+PostGIS_Petascope_insert.sh MARSIS_data_xxxx float echo (xxxx = orbit id number)
+
+Simulation ingestion:
+PostGIS_Petascope_insert.sh MARSIS_cscs_xxxx float echo (xxxx = orbit id number)
+    
+
+
