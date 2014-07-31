@@ -1,0 +1,8 @@
+This is the README file for the installation of required software 
+and the data ingestion for the Planetserver/MARSIS client.
+
+Please refers to: 
+
+INSTALL for a description of the software installation.
+
+INGESTION for a descritpion of the ingestion scripts and their usage.
